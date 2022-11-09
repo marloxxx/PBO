@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.admin.BookController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <center>
+            <AnchorPane prefHeight="720.0" prefWidth="1006.0" BorderPane.alignment="CENTER">
+               <AnchorPane fx:id="index">
+                  <children>
+                     <VBox layoutX="-1.0" prefHeight="720.0" prefWidth="1033.0" style="-fx-background-color: #eaf4f5;">
+                        <children>
+                           <HBox prefHeight="100.0" prefWidth="0.0">
+                              <children>
+                                 <Pane prefHeight="74.0" prefWidth="972.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+                                    <children>
+                                       <Label layoutX="17.0" layoutY="21.0" stylesheets="@style.css" text="Books">
+                                          <font>
+                                             <Font size="25.0" />
+                                          </font></Label>
+                                    </children>
+                                    <HBox.margin>
+                                       <Insets left="30.0" right="20.0" top="20.0" />
+                                    </HBox.margin>
+                                    <effect>
+                                       <DropShadow>
+                                          <color>
+                                             <Color red="0.5647059082984924" green="0.5647059082984924" blue="0.5647059082984924" />
+                                          </color>
+                                       </DropShadow>
+                                    </effect>
+                                 </Pane>
+                              </children>
+                           </HBox>
+                           <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="1005.0">
+                              <VBox.margin>
+                                 <Insets left="30.0" />
+                              </VBox.margin>
+                              <children>
+                                 <Hyperlink text="Home">
+
+                                 </Hyperlink>
+                                 <Label text="&gt; Book" />
+                              </children>
+                           </HBox>
+                           <VBox prefHeight="494.0" prefWidth="909.0" spacing="10.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+                              <VBox.margin>
+                                 <Insets bottom="30.0" left="30.0" right="30.0" />
+                              </VBox.margin>
+                              <effect>
+                                 <DropShadow>
+                                    <color>
+                                       <Color red="0.5657894611358643" green="0.5657894611358643" blue="0.5657894611358643" />
+                                    </color>
+                                 </DropShadow>
+                              </effect>
+                              <children>
+                                 <HBox prefHeight="60.0" prefWidth="903.0">
+                                    <children>
+                                       <Pane prefHeight="200.0" prefWidth="200.0">
+                                          <children>
+                                             <Label layoutX="14.0" layoutY="18.0" text="Book Data">
+                                                <font>
+                                                   <Font size="18.0" />
+                                                </font>
+                                             </Label>
+                                          </children>
+                                       </Pane>
+                                       <Pane prefHeight="55.0" prefWidth="734.0">
+                                          <children>
+                                             <TextField fx:id="search" layoutX="597.0" layoutY="13.0" prefHeight="26.0" prefWidth="149.0" promptText="Search Book" />
+                                          </children>
+                                       </Pane>
+                                    </children>
+                                 </HBox>
+                                 <HBox alignment="TOP_RIGHT" prefHeight="53.0" prefWidth="928.0">
+                                    <children>
+                                       <Pane prefHeight="50.0" prefWidth="222.0">
+                                          <children>
+                                             <JFXButton fx:id="btn_add" buttonType="RAISED" layoutX="57.0" layoutY="-3.0" prefHeight="43.0" prefWidth="151.0" styleClass="button-add" stylesheets="@style.css" text="Add Book" textFill="WHITE">
+                                                <font>
+                                                   <Font size="14.0" />
+                                                </font></JFXButton>
+                                             <FontAwesomeIconView fill="WHITE" glyphName="PLUS" layoutX="78.0" layoutY="27.0" size="20" />
+                                          </children>
+                                       </Pane>
+                                    </children>
+                                 </HBox>
+                                 <VBox prefHeight="366.0" prefWidth="922.0">
+                                    <children>
+                                       <TableView fx:id="tableBook" prefHeight="323.0" prefWidth="922.0">
+                                         <columns>
+                                           <TableColumn fx:id="tcId" prefWidth="75.0" text="IdBook" />
+                                           <TableColumn fx:id="tcTitle" prefWidth="120.79998779296875" text="Title" />
+                                             <TableColumn fx:id="tcAuthor" prefWidth="91.20002746582031" text="Author" />
+                                             <TableColumn fx:id="tcPublisher" prefWidth="128.0" text="Publisher" />
+                                             <TableColumn fx:id="tcYear" prefWidth="116.0" text="Year" />
+                                             <TableColumn fx:id="tcCategory" prefWidth="143.20001220703125" text="Category" />
+                                             <TableColumn fx:id="tcQuantity" prefWidth="102.39996337890625" text="Quantity" />
+                                             <TableColumn fx:id="tcAction" prefWidth="128.7999267578125" text="Action" />
+                                         </columns>
+                                       </TableView>
+                                       <Pagination fx:id="pagination" prefHeight="42.0" prefWidth="945.0" />
+                                    </children>
+                                 </VBox>
+                              </children>
+                              <padding>
+                                 <Insets left="5.0" right="5.0" />
+                              </padding>
+                           </VBox>
+                           <HBox alignment="CENTER" prefHeight="67.0" prefWidth="1005.0" style="-fx-background-color: #ebebeb;">
+                              <children>
+                                 <Label layoutX="485.0" layoutY="32.0" text="Copyright © 2022" />
+                              </children>
+                           </HBox>
+                        </children>
+                     </VBox>
+                  </children>
+               </AnchorPane>
+               <AnchorPane fx:id="form_input" visible="false">
+                  <children>
+                     <VBox layoutX="-1.0" prefHeight="720.0" prefWidth="1005.0" style="-fx-background-color: #eaf4f5;">
+                        <children>
+                           <HBox prefHeight="100.0" prefWidth="0.0">
+                              <children>
+                                 <Pane prefHeight="74.0" prefWidth="967.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+                                    <children>
+                                       <Label layoutX="9.0" layoutY="18.0" stylesheets="@style.css" text="Books">
+                                          <font>
+                                             <Font size="25.0" />
+                                          </font></Label>
+                                    </children>
+                                    <HBox.margin>
+                                       <Insets left="30.0" right="20.0" top="20.0" />
+                                    </HBox.margin>
+                                    <effect>
+                                       <DropShadow>
+                                          <color>
+                                             <Color red="0.5647059082984924" green="0.5647059082984924" blue="0.5647059082984924" />
+                                          </color>
+                                       </DropShadow>
+                                    </effect>
+                                 </Pane>
+                              </children>
+                           </HBox>
+                           <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="1005.0">
+                              <VBox.margin>
+                                 <Insets left="30.0" />
+                              </VBox.margin>
+                              <children>
+                                 <Hyperlink text="Home">
+
+                                 </Hyperlink>
+                                 <Label text="&gt; Book" />
+                              </children>
+                           </HBox>
+                           <VBox prefHeight="504.0" prefWidth="967.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+                              <VBox.margin>
+                                 <Insets bottom="30.0" left="30.0" right="30.0" />
+                              </VBox.margin>
+                              <effect>
+                                 <DropShadow>
+                                    <color>
+                                       <Color red="0.5657894611358643" green="0.5657894611358643" blue="0.5657894611358643" />
+                                    </color>
+                                 </DropShadow>
+                              </effect>
+                              <children>
+                                 <HBox prefHeight="65.0" prefWidth="945.0">
+                                    <children>
+                                       <Pane prefHeight="200.0" prefWidth="200.0">
+                                          <children>
+                                             <Label layoutX="21.0" layoutY="20.0" text="Input Book">
+                                                <font>
+                                                   <Font size="20.0" />
+                                                </font>
+                                             </Label>
+                                          </children>
+                                       </Pane>
+                                    </children>
+                                 </HBox>
+                                 <Line endX="967.0" />
+                                 <HBox>
+                                    <children>
+                                       <VBox alignment="TOP_CENTER" prefHeight="433.0" prefWidth="406.0" spacing="15.0">
+                                          <children>
+                                             <Label text="Cover">
+                                                <font>
+                                                   <Font name="Arial" size="18.0" />
+                                                </font>
+                                             </Label>
+                                             <Pane prefHeight="200.0" prefWidth="193.0" styleClass="form-input-image" stylesheets="@style.css">
+                                                <children>
+                                                   <ImageView fx:id="cover" fitHeight="200.0" fitWidth="203.0" pickOnBounds="true" preserveRatio="true" />
+                                                </children>
+                                             </Pane>
+                                             <Pane prefHeight="91.0" prefWidth="196.0">
+                                                <children>
+                                                   <JFXButton fx:id="btn_upload" layoutX="56.0" layoutY="34.0" styleClass="button-upload" stylesheets="@style.css" text="Choose File" />
+                                                </children>
+                                             </Pane>
+                                          </children>
+                                          <HBox.margin>
+                                             <Insets left="15.0" top="10.0" />
+                                          </HBox.margin>
+                                       </VBox>
+                                       <VBox>
+                                          <children>
+                                             <HBox alignment="CENTER_LEFT" prefHeight="41.0" prefWidth="968.0" visible="false">
+                                                <children>
+                                                   <Pane prefHeight="41.0" prefWidth="223.0">
+                                                      <children>
+                                                         <Label layoutX="25.0" layoutY="12.0" text="Label" />
+                                                      </children>
+                                                   </Pane>
+                                                   <Pane layoutX="10.0" layoutY="10.0" prefHeight="41.0" prefWidth="293.0">
+                                                      <children>
+                                                         <TextField fx:id="id" layoutX="31.0" layoutY="8.0" prefHeight="26.0" prefWidth="237.0" />
+                                                      </children>
+                                                   </Pane>
+                                                </children>
+                                             </HBox>
+                                             <HBox alignment="CENTER" prefHeight="41.0" prefWidth="968.0">
+                                                <children>
+                                                   <Pane prefHeight="41.0" prefWidth="223.0" stylesheets="@style.css">
+                                                      <children>
+                                                         <Label layoutX="27.0" layoutY="7.0" stylesheets="@style.css" text="Title">
+                                                            <font>
+                                                               <Font name="Arial" size="18.0" />
+                                                            </font>
+                                                         </Label>
+                                                      </children>
+                                                   </Pane>
+                                                   <Pane layoutX="10.0" layoutY="10.0" prefHeight="41.0" prefWidth="293.0">
+                                                      <children>
+                                                         <TextField fx:id="title" layoutX="31.0" layoutY="8.0" prefHeight="26.0" prefWidth="237.0" />
+                                                      </children>
+                                                   </Pane>
+                                                </children>
+                                             </HBox>
+                                             <HBox alignment="CENTER" prefHeight="41.0" prefWidth="968.0">
+                                                <children>
+                                                   <Pane prefHeight="41.0" prefWidth="223.0">
+                                                      <children>
+                                                         <Label layoutX="25.0" layoutY="9.0" text="Author">
+                                                            <font>
+                                                               <Font name="Arial" size="18.0" />
+                                                            </font>
+                                                         </Label>
+                                                      </children>
+                                                   </Pane>
+                                                   <Pane layoutX="10.0" layoutY="10.0" prefHeight="41.0" prefWidth="293.0">
+                                                      <children>
+                                                         <TextField fx:id="author" layoutX="31.0" layoutY="8.0" prefHeight="26.0" prefWidth="237.0" />
+                                                      </children>
+                                                   </Pane>
+                                                </children>
+                                             </HBox>
+                                             <HBox alignment="CENTER" prefHeight="41.0" prefWidth="968.0">
+                                                <children>
+                                                   <Pane prefHeight="41.0" prefWidth="223.0">
+                                                      <children>
+                                                         <Label layoutX="25.0" layoutY="8.0" text="Publisher">
+                                                            <font>
+                                                               <Font size="18.0" />
+                                                            </font>
+                                                         </Label>
+                                                      </children>
+                                                   </Pane>
+                                                   <Pane layoutX="10.0" layoutY="10.0" prefHeight="41.0" prefWidth="293.0">
+                                                      <children>
+                                                         <TextField fx:id="publisher" layoutX="31.0" layoutY="8.0" prefHeight="26.0" prefWidth="237.0" />
+                                                      </children>
+                                                   </Pane>
+                                                </children>
+                                             </HBox>
+                                             <HBox alignment="CENTER" prefHeight="41.0" prefWidth="968.0">
+                                                <children>
+                                                   <Pane prefHeight="41.0" prefWidth="223.0">
+                                                      <children>
+                                                         <Label layoutX="24.0" layoutY="7.0" text="Year">
+                                                            <font>
+                                                               <Font size="18.0" />
+                                                            </font>
+                                                         </Label>
+                                                      </children>
+                                                   </Pane>
+                                                   <Pane layoutX="10.0" layoutY="10.0" prefHeight="41.0" prefWidth="293.0">
+                                                      <children>
+                                                         <TextField fx:id="year" layoutX="31.0" layoutY="8.0" prefHeight="26.0" prefWidth="237.0" />
+                                                      </children>
+                                                   </Pane>
+                                                </children>
+                                             </HBox>
+                                             <HBox alignment="CENTER" prefHeight="41.0" prefWidth="968.0">
+                                                <children>
+                                                   <Pane prefHeight="41.0" prefWidth="223.0">
+                                                      <children>
+                                                         <Label layoutX="25.0" layoutY="12.0" text="Category">
+                                                            <font>
+                                                               <Font size="18.0" />
+                                                            </font>
+                                                         </Label>
+                                                      </children>
+                                                   </Pane>
+                                                   <Pane layoutX="10.0" layoutY="10.0" prefHeight="41.0" prefWidth="293.0">
+                                                      <children>
+                                                         <ComboBox fx:id="category" editable="true" layoutX="31.0" layoutY="8.0" prefHeight="25.0" prefWidth="236.0">
+                                                            <items>
+                                                               <FXCollections fx:factory="observableArrayList">
+                                                                  <String fx:value="Art" />
+                                                                  <String fx:value="Biography" />
+                                                                  <String fx:value="Business" />
+                                                                  <String fx:value="Children" />
+                                                                  <String fx:value="Comics" />
+                                                                  <String fx:value="Computer" />
+                                                                  <String fx:value="Cooking" />
+                                                                  <String fx:value="Crafts" />
+                                                                  <String fx:value="Education" />
+                                                                  <String fx:value="Fantasy" />
+                                                                  <String fx:value="Fiction" />
+                                                                  <String fx:value="Health" />
+                                                                  <String fx:value="History" />
+                                                                  <String fx:value="Horror" />
+                                                                  <String fx:value="Math" />
+                                                                  <String fx:value="Medical" />
+                                                                  <String fx:value="Mystery" />
+                                                                  <String fx:value="Religion" />
+                                                                  <String fx:value="Romance" />
+                                                                  <String fx:value="Science" />
+                                                                  <String fx:value="Science Fiction" />
+                                                                  <String fx:value="Self Help" />
+                                                                  <String fx:value="Sports" />
+                                                                  <String fx:value="Travel" />
+                                                               </FXCollections>
+                                                            </items>
+                                                         </ComboBox>
+                                                      </children>
+                                                   </Pane>
+                                                </children>
+                                             </HBox>
+                                             <HBox alignment="CENTER" prefHeight="41.0" prefWidth="968.0">
+                                                <children>
+                                                   <Pane prefHeight="41.0" prefWidth="223.0">
+                                                      <children>
+                                                         <Label layoutX="26.0" layoutY="7.0" text="Quantity">
+                                                            <font>
+                                                               <Font size="18.0" />
+                                                            </font>
+                                                         </Label>
+                                                      </children>
+                                                   </Pane>
+                                                   <Pane layoutX="10.0" layoutY="10.0" prefHeight="41.0" prefWidth="293.0">
+                                                      <children>
+                                                         <TextField fx:id="quantity" layoutX="31.0" layoutY="8.0" prefHeight="26.0" prefWidth="237.0" />
+                                                      </children>
+                                                   </Pane>
+                                                </children>
+                                             </HBox>
+                                             <HBox alignment="CENTER" prefHeight="143.0" prefWidth="968.0">
+                                                <children>
+                                                   <Pane prefHeight="143.0" prefWidth="322.0">
+                                                      <children>
+                                                         <JFXButton fx:id="btn_save" layoutX="183.0" layoutY="61.0" prefHeight="38.0" prefWidth="75.0" styleClass="button-save" stylesheets="@style.css" text="Save" />
+                                                         <JFXButton fx:id="btn_cancel" layoutX="68.0" layoutY="61.0" prefHeight="38.0" prefWidth="75.0" styleClass="button-cancel" stylesheets="@style.css" text="Cancel" />
+                                                      </children>
+                                                   </Pane>
+                                                </children>
+                                             </HBox>
+                                          </children>
+                                       </VBox>
+                                    </children>
+                                 </HBox>
+                              </children>
+                           </VBox>
+                           <HBox alignment="CENTER" prefHeight="67.0" prefWidth="1005.0" style="-fx-background-color: #ebebeb;">
+                              <children>
+                                 <Label text="Copyright © 2022" />
+                              </children>
+                           </HBox>
+                        </children>
+                     </VBox>
+                  </children>
+               </AnchorPane>
+            </AnchorPane>
+         </center>
+         <left>
+            <VBox prefHeight="720.0" prefWidth="249.0" styleClass="aside-background" stylesheets="@style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="72.0" prefWidth="273.0">
+                     <children>
+                        <Label layoutX="27.0" layoutY="12.0" text="Library Management&#10;System" textAlignment="CENTER" textFill="WHITE" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER" layoutX="86.0" layoutY="41.0" spacing="5.0">
+                           <children>
+                              <ImageView fitHeight="83.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@avatar.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="labelName" text="Admin" textFill="#f7f7f7" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+                  <JFXButton fx:id="btn_dashboard" alignment="BASELINE_LEFT" prefHeight="43.0" prefWidth="280.0" text="Dashboard" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="HOME" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_book" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="282.0" prefHeight="43.0" prefWidth="280.0" text="Book" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BOOK" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_member" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="325.0" prefHeight="43.0" prefWidth="280.0" text="Member" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USERS" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_borrow" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="368.0" prefHeight="43.0" prefWidth="280.0" text="Borrow" textFill="#fcf5f5">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BOOK" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_fine" alignment="BASELINE_LEFT" prefHeight="43.0" prefWidth="280.0" text="Fine" textFill="#fcf5f5">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="MONEY" />
+                     </graphic>
+                  </JFXButton>
+                  <VBox alignment="BOTTOM_LEFT" prefHeight="277.0" prefWidth="273.0">
+                     <padding>
+                        <Insets bottom="30.0" />
+                     </padding>
+                     <children>
+                        <JFXButton fx:id="btn_logout" alignment="BASELINE_LEFT" prefHeight="43.0" prefWidth="280.0" text="Logout" textFill="#fcf5f5">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </left>
+      </BorderPane>
+   </children>
+</StackPane>

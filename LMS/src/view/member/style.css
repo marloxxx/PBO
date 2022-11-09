@@ -1,0 +1,91 @@
+.aside-background{
+    -fx-background-color: linear-gradient(to bottom right, #00bfff, #00ff7f);
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial";
+}
+
+.aside-button{
+    /* transparent background */
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial";
+    -fx-border-color: white;
+    -fx-border-width: 1px;
+    -fx-border-radius: 15;
+}
+
+.title-header{
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial";
+    -fx-padding: 5 10 5 10;
+}
+
+.sub-title-header{
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial";
+    -fx-padding: 5 10 5 10;
+}
+
+.button-logout{
+    -fx-background-color: #00bfff;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial";
+    -fx-border-color: transparent;
+    -fx-border-width: 1px;
+    -fx-border-radius: 15;
+}
+
+.button-add{
+    -fx-background-color: #00ff7f;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial";
+    -fx-border-width: 1px;
+    -fx-border-radius: 15;
+}
+
+.form-input{
+    -fx-background-color: linear-gradient(to bottom right, #00bfff, #00ff7f);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial";
+    -fx-border-width: 1px;
+    -fx-border-radius: 15;
+}
+
+.button-save{
+    -fx-background-color: #00ff7f;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial";
+    -fx-border-width: 1px;
+    -fx-border-radius: 15;
+}
+
+.button-cancel{
+    -fx-background-color: #ff0000;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial";
+    -fx-border-width: 1px;
+    -fx-border-radius: 15;
+}
+
+.form-hidden{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial";
+    -fx-border-width: 1px;
+    -fx-border-radius: 15;
+}

@@ -1,0 +1,17 @@
+.login-bg{
+    /*create gradient color blue green*/
+    -fx-background-color: linear-gradient(to bottom right, #00bfff, #00ff7f);
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.button-login{
+    -fx-background-color: linear-gradient(to bottom right, #00bfff, #00ff7f);
+    -fx-background-radius: 15;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Arial";
+    -fx-padding: 7 15 7 15;
+}

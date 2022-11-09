@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AuthController">
+   <children>
+      <AnchorPane prefHeight="720.0" prefWidth="1280.0">
+         <children>
+            <AnchorPane fx:id="login_form" prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane prefHeight="720.0" prefWidth="636.0" styleClass="login-bg" stylesheets="@style.css">
+                     <children>
+                        <ImageView fitHeight="469.0" fitWidth="470.0" layoutX="84.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Logo.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="636.0" prefHeight="720.0" prefWidth="643.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="720.0" prefWidth="643.0" spacing="20.0">
+                           <children>
+                              <Pane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="263.0" layoutY="74.0" text="Sign In">
+                                       <font>
+                                          <Font size="36.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="10.0" layoutY="10.0" prefWidth="643.0">
+                                 <children>
+                                    <Label layoutX="240.0" layoutY="11.0" text="Username" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="10.0" layoutY="230.0" prefWidth="643.0">
+                                 <children>
+                                    <TextField fx:id="username" focusTraversable="false" layoutX="241.0" prefHeight="26.0" prefWidth="197.0" promptText="Enter Username" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="10.0" layoutY="279.0" prefWidth="643.0">
+                                 <children>
+                                    <Label layoutX="243.0" text="Password" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="10.0" layoutY="474.0" prefWidth="643.0">
+                                 <children>
+                                    <PasswordField fx:id="password" focusTraversable="false" layoutX="240.0" prefHeight="26.0" prefWidth="197.0" promptText="Enter Password" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="10.0" layoutY="512.0" prefHeight="92.0" prefWidth="643.0">
+                                 <children>
+                                    <JFXButton fx:id="btn_login" layoutX="289.0" layoutY="30.0" styleClass="login-bg" stylesheets="@style.css" text="Login" textFill="WHITE">
+                                       <padding>
+                                          <Insets bottom="7.0" left="15.0" right="15.0" top="7.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></JFXButton>
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="10.0" layoutY="453.0" prefHeight="208.0" prefWidth="643.0">
+                                 <children>
+                                    <Hyperlink fx:id="register" layoutX="293.0" layoutY="170.0" prefHeight="24.0" prefWidth="64.0" stylesheets="@style.css" text="Register" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="register_form" layoutX="10.0" layoutY="10.0" prefHeight="484.0" prefWidth="739.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane prefHeight="720.0" prefWidth="643.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="720.0" prefWidth="643.0" spacing="10.0">
+                           <children>
+                              <Pane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="263.0" layoutY="94.0" text="Sign In">
+                                       <font>
+                                          <Font size="36.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="10.0" layoutY="10.0">
+                                 <children>
+                                    <Label layoutX="240.0" layoutY="11.0" text="Name" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="10.0" layoutY="230.0" prefHeight="35.0" prefWidth="643.0">
+                                 <children>
+                                    <TextField fx:id="name" focusTraversable="false" layoutX="241.0" prefHeight="15.0" prefWidth="161.0" promptText="Enter Name" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="10.0" layoutY="325.0" prefWidth="643.0">
+                                 <children>
+                                    <Label layoutX="243.0" prefHeight="26.0" prefWidth="83.0" text="Username" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="10.0" layoutY="269.0">
+                                 <children>
+                                    <TextField fx:id="username2" focusTraversable="false" layoutX="241.0" prefHeight="29.0" prefWidth="161.0" promptText="Enter Username" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="10.0" layoutY="279.0" prefWidth="643.0">
+                                 <children>
+                                    <Label layoutX="243.0" prefHeight="29.0" prefWidth="64.0" text="Password" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="10.0" layoutY="474.0" prefWidth="643.0">
+                                 <children>
+                                    <PasswordField fx:id="password2" focusTraversable="false" layoutX="240.0" promptText="Enter Password" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="10.0" layoutY="512.0" prefHeight="269.0" prefWidth="643.0">
+                                 <children>
+                                    <JFXButton fx:id="btn_register" layoutX="275.0" layoutY="60.0" styleClass="login-bg" stylesheets="@style.css" text="Register" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></JFXButton>
+                                    <Hyperlink fx:id="login" layoutX="291.0" layoutY="244.0" text="Login" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="644.0" prefHeight="720.0" prefWidth="636.0" styleClass="login-bg" stylesheets="@style.css">
+                     <children>
+                        <ImageView fitHeight="469.0" fitWidth="470.0" layoutX="84.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Logo.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

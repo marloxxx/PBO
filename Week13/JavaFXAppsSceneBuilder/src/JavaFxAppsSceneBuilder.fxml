@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafxappsscenebuilder.JavaFxAppsSceneBuilder">
+   <children>
+      <Label layoutX="53.0" layoutY="33.0" text="Data Pembelian Barang">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="78.0" text="Kode Barang">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="108.0" text="Nama Barang">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="138.0" text="Kategori Barang">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="168.0" text="Harga Beli">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="200.0" text="Harga Jual">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="53.0" layoutY="230.0" text="Stok">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="224.0" layoutY="270.0" mnemonicParsing="false" text="Proses" />
+      <TextField layoutX="224.0" layoutY="81.0" prefHeight="26.0" prefWidth="186.0" />
+      <TextField layoutX="224.0" layoutY="111.0" prefHeight="26.0" prefWidth="186.0" />
+      <TextField layoutX="224.0" layoutY="171.0" prefHeight="26.0" prefWidth="186.0" />
+      <TextField layoutX="224.0" layoutY="203.0" prefHeight="26.0" prefWidth="186.0" />
+      <TextField layoutX="224.0" layoutY="233.0" prefHeight="26.0" prefWidth="186.0" />
+      <ComboBox layoutX="224.0" layoutY="141.0" prefHeight="26.0" prefWidth="175.0">
+              <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Makanan" />
+               <String fx:value="Minuman" />
+               <String fx:value="Pakaian" />
+               <String fx:value="Elektronik" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <Button layoutX="285.0" layoutY="270.0" mnemonicParsing="false" text="Batal" />
+      <Button layoutX="358.0" layoutY="270.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="50.0" text="Exit" />
+   </children>
+</AnchorPane>

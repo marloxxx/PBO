@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.admin.BorrowController">
+    <children>
+        <BorderPane prefHeight="200.0" prefWidth="200.0">
+            <center>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <AnchorPane>
+                        <children>
+                            <VBox layoutX="-1.0" prefHeight="720.0" prefWidth="1031.0" style="-fx-background-color: #eaf4f5;">
+                                <children>
+                                    <HBox prefHeight="100.0" prefWidth="0.0">
+                                        <children>
+                                            <Pane prefHeight="74.0" prefWidth="969.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+                                                <children>
+                                                    <Label layoutX="17.0" layoutY="21.0" stylesheets="@style.css" text="Borrow">
+                                                        <font>
+                                                            <Font size="25.0" />
+                                                        </font></Label>
+                                                </children>
+                                                <HBox.margin>
+                                                    <Insets left="30.0" right="20.0" top="20.0" />
+                                                </HBox.margin>
+                                                <effect>
+                                                    <DropShadow>
+                                                        <color>
+                                                            <Color red="0.5647059082984924" green="0.5647059082984924" blue="0.5647059082984924" />
+                                                        </color>
+                                                    </DropShadow>
+                                                </effect>
+                                            </Pane>
+                                        </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="1005.0">
+                                        <VBox.margin>
+                                            <Insets left="30.0" />
+                                        </VBox.margin>
+                                        <children>
+                                            <Hyperlink text="Home">
+                                                <graphic>
+                                                    <FontAwesomeIconView glyphName="HOME" />
+                                                </graphic>
+                                            </Hyperlink>
+                                            <Label text="&gt; Borrow" />
+                                        </children>
+                                    </HBox>
+                                    <VBox prefHeight="504.0" prefWidth="967.0" spacing="20.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+                                        <VBox.margin>
+                                            <Insets bottom="30.0" left="30.0" right="30.0" />
+                                        </VBox.margin>
+                                        <effect>
+                                            <DropShadow>
+                                                <color>
+                                                    <Color red="0.5657894611358643" green="0.5657894611358643" blue="0.5657894611358643" />
+                                                </color>
+                                            </DropShadow>
+                                        </effect>
+                                        <children>
+                                            <HBox prefHeight="65.0" prefWidth="945.0">
+                                                <children>
+                                                    <Pane prefHeight="200.0" prefWidth="200.0">
+                                                        <children>
+                                                            <Label layoutX="14.0" layoutY="18.0" text="Borrow Data">
+                                                                <font>
+                                                                    <Font size="18.0" />
+                                                                </font>
+                                                            </Label>
+                                                        </children>
+                                                    </Pane>
+                                                    <Pane prefHeight="65.0" prefWidth="745.0">
+                                                        <children>
+                                                            <TextField fx:id="search" layoutX="546.0" layoutY="18.0" prefHeight="35.0" prefWidth="174.0" promptText="Search Book" />
+                                                        </children>
+                                                    </Pane>
+                                                </children>
+                                            </HBox>
+                                 <VBox prefHeight="400.0" prefWidth="952.0">
+                                    <VBox.margin>
+                                       <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </VBox.margin>
+                                    <children>
+                                                  <TableView fx:id="borrowTable">
+                                                      <columns>
+                                             <TableColumn fx:id="tcId" prefWidth="105.60002863407135" text="Id Borrow" />
+                                                          <TableColumn fx:id="tcMember" prefWidth="125.60000610351562" text="Member" />
+                                             <TableColumn fx:id="tcBook" prefWidth="156.79998779296875" text="Book" />
+                                             <TableColumn fx:id="tcBorrowDate" prefWidth="173.60012817382812" text="Borrow Date" />
+                                             <TableColumn fx:id="tcReturnDate" prefWidth="161.60003662109375" text="Return Date" />
+                                             <TableColumn fx:id="tcStatus" prefWidth="100.0" text="Status" />
+                                             <TableColumn fx:id="tcAction" prefWidth="118.4000244140625" text="Action" />
+                                                      </columns>
+                                                  </TableView>
+                                       <Pagination fx:id="pagination" prefHeight="47.0" prefWidth="945.0" />
+                                    </children>
+                                 </VBox>
+                                        </children>
+                              <padding>
+                                 <Insets left="5.0" right="5.0" />
+                              </padding>
+                                    </VBox>
+                                    <HBox alignment="CENTER" prefHeight="67.0" prefWidth="1005.0" style="-fx-background-color: #ebebeb;">
+                                        <children>
+                                            <Label text="Copyright © 2022" />
+                                        </children>
+                                    </HBox>
+                                </children>
+                            </VBox>
+                        </children>
+                    </AnchorPane>
+                </AnchorPane>
+            </center>
+         <left>
+            <VBox prefHeight="720.0" prefWidth="249.0" styleClass="aside-background" stylesheets="@style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane prefHeight="72.0" prefWidth="273.0">
+                     <children>
+                        <Label layoutX="27.0" layoutY="12.0" text="Library Management&#10;System" textAlignment="CENTER" textFill="WHITE" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER" layoutX="86.0" layoutY="41.0" spacing="5.0">
+                           <children>
+                              <ImageView fitHeight="83.0" fitWidth="102.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@avatar.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="labelName" textFill="#f7f7f7" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+                  <JFXButton fx:id="btn_dashboard" alignment="BASELINE_LEFT" prefHeight="43.0" prefWidth="280.0" text="Dashboard" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="HOME" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_book" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="282.0" prefHeight="43.0" prefWidth="280.0" text="Book" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BOOK" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_member" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="325.0" prefHeight="43.0" prefWidth="280.0" text="Member" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USERS" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_borrow" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="368.0" prefHeight="43.0" prefWidth="280.0" text="Borrow" textFill="#fcf5f5">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BOOK" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btn_fine" alignment="BASELINE_LEFT" prefHeight="43.0" prefWidth="280.0" text="Fine" textFill="#fcf5f5">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="MONEY" />
+                     </graphic>
+                  </JFXButton>
+                  <VBox alignment="BOTTOM_LEFT" prefHeight="277.0" prefWidth="273.0">
+                     <padding>
+                        <Insets bottom="30.0" />
+                     </padding>
+                     <children>
+                        <JFXButton fx:id="btn_logout" alignment="BASELINE_LEFT" prefHeight="43.0" prefWidth="280.0" text="Logout" textFill="#fcf5f5">
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </left>
+        </BorderPane>
+    </children>
+</StackPane>
